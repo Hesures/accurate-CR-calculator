@@ -3,11 +3,12 @@ body {
 }
 
 h1, h2, h3 {
-    font-family: 'Marcellus SC', serif;
+    font-family: 'EB Garamond', serif;
+    font-variant: small-caps;
 }
 
 * {
-    font-family: 'Amiko', serif;
+    font-family: 'Source Serif Pro', serif;
 }
 
 .grid-layout {
