@@ -35,25 +35,26 @@ calculate.addEventListener("click", function (){
 
     // quantity/value of the number of characters
     var quantity = numberOfCharacters.value;
+    var totalXPMonsters = numberOfMonsters.value * xpOfMonsters.value; // Total XP of monsters
 
-    //REPETIDAS ESTAS LÍNEAS MÁS ABAJO
-    for (var i = 0; i <= 3; i++) {
-        console.log(quantity * difficultyPerLevel[i]);}   
+    // CON IF
+    if (totalXPMonsters < quantity * difficultyPerLevel[0]) {
+        console.log("Trivial");
+    };
+    if ((totalXPMonsters >= quantity * difficultyPerLevel[0]) && totalXPMonsters < quantity * difficultyPerLevel[1]) {
+        console.log("Easy");
+    };
+    if (totalXPMonsters >= (quantity * difficultyPerLevel[1]) && totalXPMonsters < (quantity * difficultyPerLevel[2])) {
+        console.log("Medium");
+    };
+    if (totalXPMonsters >= (quantity * difficultyPerLevel[2]) && totalXPMonsters < (quantity * difficultyPerLevel[3])) {
+        console.log("Hard");     
+    };
+    if (totalXPMonsters >= (quantity * difficultyPerLevel[3])) {
+        console.log("Deadly");   
+    }
 
     // ¿Introducir un foreach de difficultyPerLevel?
     // ¿También se podría construir usando los datos introducidos como parámetros de una función? Ej: function (x, y), donde x e y son nivel, array, xp, etc... 
     
-
-//CORTAR ESTO ANTES DE SUBIR A GITHUB Y DESPUÉS PEGAR Y EXPERIMENTAR
-        // for (var i = 0; i <= 3; i++) {
-        // var challenge = numberOfMonsters.value * xpOfMonsters.value;
-        // console.log(quantity * difficultyPerLevel[i]);   
-        // if (challenge <= quantity * difficultyPerLevel[i]) {
-        //     console.log("Easy-Medium");
-        // } else {
-        //         console.log("Difficult");
-        //     }
-        // }
-    }
-
-);
+    });
