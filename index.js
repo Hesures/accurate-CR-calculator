@@ -3,6 +3,8 @@ const levelOfCharacters = document.querySelector("#levelOfCharacters");
 const numberOfMonsters = document.querySelector("#numberOfMonsters");
 const xpOfMonsters = document.querySelector("#xpOfMonsters");
 
+const result = document.querySelector("#result");
+
 const calculate = document.querySelector("#calculate");
 
 var chartOfDifficulty = 
@@ -37,24 +39,30 @@ calculate.addEventListener("click", function (){
     var quantity = numberOfCharacters.value;
     var totalXPMonsters = numberOfMonsters.value * xpOfMonsters.value; // Total XP of monsters
 
-    // CON IF
+    // CON IF -- HAY QUE QUITAR LAS CLASES ANTERIORES PARA QUE NO SE QUEDE SIEMPRE LA ÚLTIMA?? - result.classlist
     if (totalXPMonsters < quantity * difficultyPerLevel[0]) {
-        console.log("Trivial");
+        result.innerHTML="<h2>Trivial</h2>";
+        result.classList.add("trivial");
     };
     if ((totalXPMonsters >= quantity * difficultyPerLevel[0]) && totalXPMonsters < quantity * difficultyPerLevel[1]) {
-        console.log("Easy");
+        result.innerHTML="<h2>Fácil</h2>";
+        result.classList.add("easy");
     };
     if (totalXPMonsters >= (quantity * difficultyPerLevel[1]) && totalXPMonsters < (quantity * difficultyPerLevel[2])) {
-        console.log("Medium");
+        result.innerHTML="<h2>Normal</h2>";
+        result.classList.add("medium");
     };
     if (totalXPMonsters >= (quantity * difficultyPerLevel[2]) && totalXPMonsters < (quantity * difficultyPerLevel[3])) {
-        console.log("Hard");     
+        result.innerHTML="<h2>Difícil</h2>";
+        result.classList.add("hard");
     };
     if (totalXPMonsters >= (quantity * difficultyPerLevel[3])) {
-        console.log("Deadly");   
+        result.innerHTML="<h2>Mortal</h2>";   
+        result.classList.add("deadly");
     }
 
     // ¿Introducir un foreach de difficultyPerLevel?
     // ¿También se podría construir usando los datos introducidos como parámetros de una función? Ej: function (x, y), donde x e y son nivel, array, xp, etc... 
     
     });
+
