@@ -35,15 +35,15 @@ h1, h2, h3 {
 /********* LEVELS OF DIFFICULTY *********************/
 
 .trivial {
-    background-color: lightblue; 
+    background-color: white; 
 }
 
 .easy {
-    background-color: lightgreen;
+    background-color: lightblue;
 }
 
 .medium {
-    background-color: gainsboro;
+    background-color: lightgreen;
 }
 
 .hard {
