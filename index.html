@@ -19,13 +19,25 @@
 <body>
     <h1>Accurate Challenge Rating Calculator</h1>
 
+
+
+    <div>
+        <button id="calculateXP" type="submit">Puntos de experiencia (activado)</button>
+    </div>
+
+    <div class">
+        <button id="calculateXP" type="submit">Valor de desafío (activado)</button>
+    </div>
+
+    <br/>
+
 <!--------------- CHARACTERS TABLE --------------->
 
     <div class="grid-layout">
         <div><label for="numberOfCharacters">Número de <br/>personajes:</label></div>
         <div><label for="levelOfCharacters">Nivel de los<br/>personajes:</label></div>
-        <div><input id="numberOfCharacters" class="input-width" type="number" name="numberOfCharacters"></div>
-        <div><input id="levelOfCharacters" class="input-width" type="number" name="levelOfCharacters"></div>
+        <div><input id="numberOfCharacters" class="input-width" type="number" name="numberOfCharacters" placeholder="Personajes"></div>
+        <div><input id="levelOfCharacters" class="input-width" type="number" name="levelOfCharacters" placeholder="Nivel"></div>
     </div>
     
     <br/>
@@ -34,17 +46,28 @@
 
     <div class="grid-layout">
         <div><label for="numberOfMonsters">Número de <br/>monstruos:</label></div>
-        <div><label for="xpOfMonsters">PX de los <br/>monstruos:</label></div>
-        <div><input id="numberOfMonsters" class="input-width" type="number" name="numberOfMonsters"></div>
-        <div><input id="xpOfMonsters" class="input-width" type="number" name="xpOfMonsters"></div>
+        <div><label for="xpOfMonsters">XP de los <br/>monstruos:</label></div>
+        <div><input id="numberOfMonsters" class="input-width" type="number" name="numberOfMonsters" placeholder="Monstruos"></div>
+        <div><input id="xpOfMonsters" class="input-width" type="number" name="xpOfMonsters" placeholder="Experiencia"></div>
     </div>
 
     <br/>
 
+    <div class="grid-layout">
+        <div><label for="numberOfMonsters">Número de <br/>monstruos:</label></div>
+        <div><label for="xpOfMonsters">VD de los <br/>monstruos:</label></div>
+        <div><input id="numberOfMonsters" class="input-width" type="number" name="numberOfMonsters" placeholder="Monstruos"></div>
+        <div><input id="xpOfMonsters" class="input-width" type="number" name="xpOfMonsters" placeholder="Desafío"></div>
+    </div>
+
 <!--------------- CALCULATE --------------->
 
     <div>
-        <button id="calculate" type="submit">Calcular</button>
+        <button id="calculateXP" type="submit">Calcular según XP</button>
+    </div>
+
+    <div>
+        <button id="calculateCR" type="submit">Calcular según VD</button>
     </div>
 
 <!--------------- RESULT --------------->

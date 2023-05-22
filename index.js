@@ -5,9 +5,13 @@ const xpOfMonsters = document.querySelector("#xpOfMonsters");
 
 const result = document.querySelector("#result");
 
-const calculate = document.querySelector("#calculate");
+// -------------- BOTTONS -------------------- 
+const divXPActivate = document.querySelector(".divXPActivate")
+const calculateXP = document.querySelector("#calculateXP");
+const calculateCR = document.querySelector("#calculateCR");
 
-var chartOfDifficulty = 
+// -------------- CHARTS -------------------- 
+var chartOfXP = 
 [/*lvl 1*/[25,50,75,100],
 /*lvl 2*/[50,100,150,200],
 /*lvl 3*/[75,150,225,400],
@@ -29,11 +33,42 @@ var chartOfDifficulty =
 /*lvl 19*/[2400,4900,7300,10900],
 /*lvl 20*/[2800,5700,8500,12700]];
 
+var chartOfCR = 
+[/*CR 0*/ 10,
+/*CR 1/8*/ 25,
+/*CR 1/4*/ 50,
+/*CR 1/2*/ 100,
+/*CR 1*/ 200,
+/*CR 2*/ 450,
+/*CR 3*/ 700,
+/*CR 4*/ 1100,
+/*CR 5*/ 1800,
+/*CR 6*/ 2300,
+/*CR 7*/ 2900,
+/*CR 8*/ 3900,
+/*CR 9*/ 5000,
+/*CR 10*/ 5900,
+/*CR 11*/ 7200,
+/*CR 12*/ 8400,
+/*CR 13*/ 10000,
+/*CR 14*/ 11500,
+/*CR 15*/ 13000,
+/*CR 16*/ 15000,
+/*CR 17*/ 18000,
+/*CR 18*/ 20000,
+/*CR 19*/ 22000,
+/*CR 20*/ 25000,
+/*CR 21*/ 33000,
+/*CR 22*/ 41000,
+/*CR 23*/ 50000,
+/*CR 24*/ 62000,
+/*CR 30*/ 155000];
 
-calculate.addEventListener("click", function (){
+
+calculateXP.addEventListener("click", function (){
     
     // number of difficulty (Easy, Medium, Hard, Deadly) per level
-    var difficultyPerLevel = chartOfDifficulty[levelOfCharacters.value-1]; 
+    var difficultyPerLevel = chartOfXP[levelOfCharacters.value-1]; 
 
     // quantity/value of the number of characters
     var quantity = numberOfCharacters.value;
@@ -47,27 +82,29 @@ calculate.addEventListener("click", function (){
     };
     if ((totalXPMonsters >= quantity * difficultyPerLevel[0]) && totalXPMonsters < quantity * difficultyPerLevel[1]) {
         result.innerHTML="<h2>Fácil</h2>";
-    result.removeAttribute("class");
+        result.removeAttribute("class");
         result.classList.add("easy");
     };
     if (totalXPMonsters >= (quantity * difficultyPerLevel[1]) && totalXPMonsters < (quantity * difficultyPerLevel[2])) {
         result.innerHTML="<h2>Normal</h2>";
-    result.removeAttribute("class");
+        result.removeAttribute("class");
         result.classList.add("medium");
     };
     if (totalXPMonsters >= (quantity * difficultyPerLevel[2]) && totalXPMonsters < (quantity * difficultyPerLevel[3])) {
         result.innerHTML="<h2>Difícil</h2>";
-    result.removeAttribute("class");
+        result.removeAttribute("class");
         result.classList.add("hard");
     };
     if (totalXPMonsters >= (quantity * difficultyPerLevel[3])) {
         result.innerHTML="<h2>Mortal</h2>"; 
-    result.removeAttribute("class");
+        result.removeAttribute("class");
         result.classList.add("deadly");
     }
+});
 
-    // ¿Introducir un foreach de difficultyPerLevel?
-    // ¿También se podría construir usando los datos introducidos como parámetros de una función? Ej: function (x, y), donde x e y son nivel, array, xp, etc... 
-    
-    });
+// calculateCR.addEventListener("click", function () {
+
+// })
+
+
 

@@ -32,6 +32,10 @@ h1, h2, h3 {
     height: 5rem;
 }
 
+button {
+    width: 20vw;
+}
+
 /********* LEVELS OF DIFFICULTY *********************/
 
 .trivial {
@@ -57,7 +61,7 @@ h1, h2, h3 {
 /********* MEDIA *********************/
 
 @media (max-width: 895px) {
-    #result {
+    #result, button {
         width: 163.797px;
     }
 }
