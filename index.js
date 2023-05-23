@@ -2,15 +2,21 @@ const numberOfCharacters = document.querySelector("#numberOfCharacters");
 const levelOfCharacters = document.querySelector("#levelOfCharacters");
 const numberOfMonsters = document.querySelector("#numberOfMonsters");
 const xpOfMonsters = document.querySelector("#xpOfMonsters");
+const crOfMonsters = document.querySelector("#crOfMonsters");
 
 const result = document.querySelector("#result");
 
-// -------------- BOTTONS -------------------- 
-const divXPActivate = document.querySelector(".divXPActivate")
-const calculateXP = document.querySelector("#calculateXP");
-const calculateCR = document.querySelector("#calculateCR");
+// -------------- BUTTONS -------------------- 
+const activeXP = document.querySelector(".activeXP");
+const activeCR = document.querySelector(".activeCR");
+const calculateXP = document.querySelector(".calculateXP");
+const calculateCR = document.querySelector(".calculateCR");
 
 // -------------- CHARTS -------------------- 
+
+var divXPMonsters = document.querySelector(".div_XPMonsters");
+var divCRMonsters = document.querySelector(".div_CRMonsters");
+
 var chartOfXP = 
 [/*lvl 1*/[25,50,75,100],
 /*lvl 2*/[50,100,150,200],
@@ -74,7 +80,6 @@ calculateXP.addEventListener("click", function (){
     var quantity = numberOfCharacters.value;
     var totalXPMonsters = numberOfMonsters.value * xpOfMonsters.value; // Total XP of monsters
 
-    // CON IF -- HAY QUE QUITAR LAS CLASES ANTERIORES PARA QUE NO SE QUEDE SIEMPRE LA ÚLTIMA?? - result.classlist
     if (totalXPMonsters < quantity * difficultyPerLevel[0]) {
         result.innerHTML="<h2>Trivial</h2>";
         result.removeAttribute("class");
@@ -106,5 +111,26 @@ calculateXP.addEventListener("click", function (){
 
 // })
 
+// -------------- TOGGLE BUTTONS XP/CR -------------------- 
 
+activeXP.addEventListener("click", function () {
+    activeXP.classList.add("hidden");
+    activeCR.classList.remove("hidden");
+    
+    divXPMonsters.classList.add("hidden");
+    divCRMonsters.classList.remove("hidden");
 
+    calculateXP.classList.add("hidden");
+    calculateCR.classList.remove("hidden");
+});
+
+activeCR.addEventListener("click", function () {
+    activeXP.classList.remove("hidden");
+    activeCR.classList.add("hidden");
+    
+    divXPMonsters.classList.remove("hidden");
+    divCRMonsters.classList.add("hidden");
+
+    calculateXP.classList.remove("hidden");
+    calculateCR.classList.add("hidden");
+});

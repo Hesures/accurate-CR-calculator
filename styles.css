@@ -36,6 +36,10 @@ button {
     width: 20vw;
 }
 
+.hidden {
+    display: none;
+}
+
 /********* LEVELS OF DIFFICULTY *********************/
 
 .trivial {
