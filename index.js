@@ -127,7 +127,7 @@ activeXP.addEventListener("click", function () {
 activeCR.addEventListener("click", function () {
     activeXP.classList.remove("hidden");
     activeCR.classList.add("hidden");
-    
+
     divXPMonsters.classList.remove("hidden");
     divCRMonsters.classList.add("hidden");
 

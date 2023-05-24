@@ -17,7 +17,7 @@ h1, h2, h3 {
     justify-content: center;
     width: 20vw;
     margin: 0 auto;
-    gap: 1rem;
+    column-gap: 1rem;
 }
 
 .input-width {

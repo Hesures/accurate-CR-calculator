@@ -19,7 +19,7 @@
 <body>
     <h1>Accurate Challenge Rating Calculator</h1>
 
-
+<!--------------- ACTIVATE CR/XP BUTTON --------------->
 
     <div>
         <button class="activeXP" type="submit">Puntos de experiencia (activado)</button>
@@ -41,18 +41,6 @@
 
 <!--------------- MONSTERS CHART --------------->
 
-    <!-- <div class="grid-layout monstersChart"> -->
-        <!-- LABELS -->
-        <!-- <div><label for="numberOfMonsters">Número de <br/>monstruos:</label></div>
-        <div><label for="xpOfMonsters">XP de los <br/>monstruos:</label></div>
-        <div class="hidden"><label for="crOfMonsters">VD de los <br/>monstruos:</label></div> -->
-
-        <!-- FIELDS -->
-        <!-- <div><input id="numberOfMonsters" class="input-width" type="number" name="numberOfMonsters" placeholder="Monstruos"></div>
-        <div><input id="xpOfMonsters" class="input-width" type="number" name="xpOfMonsters" placeholder="Experiencia"></div>
-        <div class="hidden"><input id="crOfMonsters" class="input-width" type="number" name="crOfMonsters" placeholder="Desafío"></div>
-    </div> -->
-
     <div class="grid-layout">
         <div>
             <div><label for="numberOfMonsters">Número de <br/>monstruos:</label></div>
@@ -68,13 +56,11 @@
         <!-- CR OF MONSTERS -->
         <div class="div_CRMonsters hidden">
             <div><label for="crOfMonsters">VD de los <br/>monstruos:</label></div>
-            <div><input id="crOfMonsters" class="input-width" type="number" name="crOfMonsters" placeholder="Desafío"></div>
+            <div><input id="crOfMonsters" class="input-width" type="text" name="crOfMonsters" placeholder="Desafío"></div>
         </div>
-
     </div>
 
     <br/>  
-
 
 <!--------------- CALCULATE --------------->
 
@@ -85,10 +71,11 @@
 
 <!--------------- RESULT --------------->
 
-<div id="result"></div>
+    <div id="result"></div>
 
 <!--------------- SCRIPTS ------------------>
 
     <script src="./index.js"></script>
+
 </body>
 </html>
