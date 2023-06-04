@@ -84,23 +84,19 @@ calculateXP.addEventListener("click", function (){
         result.innerHTML="<h2>Trivial</h2>";
         result.removeAttribute("class");
         result.classList.add("trivial");
-    };
-    if ((totalXPMonsters >= quantity * difficultyPerLevel[0]) && totalXPMonsters < quantity * difficultyPerLevel[1]) {
+    } else if (totalXPMonsters < quantity * difficultyPerLevel[1]) {
         result.innerHTML="<h2>Fácil</h2>";
         result.removeAttribute("class");
         result.classList.add("easy");
-    };
-    if (totalXPMonsters >= (quantity * difficultyPerLevel[1]) && totalXPMonsters < (quantity * difficultyPerLevel[2])) {
+    }else if (totalXPMonsters < (quantity * difficultyPerLevel[2])) {
         result.innerHTML="<h2>Normal</h2>";
         result.removeAttribute("class");
         result.classList.add("medium");
-    };
-    if (totalXPMonsters >= (quantity * difficultyPerLevel[2]) && totalXPMonsters < (quantity * difficultyPerLevel[3])) {
+    }else if (totalXPMonsters < (quantity * difficultyPerLevel[3])) {
         result.innerHTML="<h2>Difícil</h2>";
         result.removeAttribute("class");
         result.classList.add("hard");
-    };
-    if (totalXPMonsters >= (quantity * difficultyPerLevel[3])) {
+    }if (totalXPMonsters >= (quantity * difficultyPerLevel[3])) {
         result.innerHTML="<h2>Mortal</h2>"; 
         result.removeAttribute("class");
         result.classList.add("deadly");
